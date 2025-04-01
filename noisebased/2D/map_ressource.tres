@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MapRessource" load_steps=4 format=3 uid="uid://cfsgo1yb4mwis"]
+
+[ext_resource type="Script" uid="uid://h0kr2evnkuj6" path="res://noisebased/2D/map_ressource.gd" id="1_2yrfc"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_2yrfc"]
+seed = 57
+frequency = 0.0021
+offset = Vector3(-190, 360.45, 0)
+fractal_lacunarity = 2.05
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_2yrfc"]
+width = 2048
+height = 1024
+noise = SubResource("FastNoiseLite_2yrfc")
+
+[resource]
+script = ExtResource("1_2yrfc")
+DeepWater = 0.4
+Water = 0.5
+Sand = 0.55
+Grass = 0.65
+Soil = 0.7
+Mountain = 0.75
+HighMountain = 0.8
+NoiseTexture = SubResource("NoiseTexture2D_2yrfc")
