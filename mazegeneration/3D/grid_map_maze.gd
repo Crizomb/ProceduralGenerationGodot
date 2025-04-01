@@ -67,8 +67,8 @@ func init_maze() -> void:
 	
 	current_pos = Vector3i(0, 0, 0)
 	explored[current_pos] = true
-	for x in range(WIDTH):
-		for z in range(HEIGHT):
+	for x in range(-1, WIDTH):
+		for z in range(-1, HEIGHT):
 			set_cell_item(Vector3i(x, 0, z), TILE_WALL) # fonction de GridMap
 
 func generate_maze_step() -> void:

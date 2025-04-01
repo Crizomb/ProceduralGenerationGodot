@@ -16,7 +16,7 @@ extends TileMapLayer
 @export_tool_button("All with wait") var all_wait_action = generate_map_all_wait
 
 const TILE_FLOOR = Vector2i(0, 0)
-const TILE_WALL = Vector2i(1, 0)
+const TILE_WALL = Vector2i(3, 0)
 var current_pos = Vector2i(0, 0)
 
 var undo_stack : Array[Vector2i] = [current_pos] # Pile des positions explores, on depopera la pile pour le backtracking
@@ -69,8 +69,8 @@ func init_maze() -> void:
 	
 	current_pos = Vector2i(0, 0)
 	explored[current_pos] = true
-	for x in range(WIDTH):
-		for y in range(HEIGHT):
+	for x in range(-1, WIDTH):
+		for y in range(-1, HEIGHT):
 			set_cell(Vector2i(x, y), 0, TILE_WALL) # fonction de TileMapLayer
 
 func _ready() -> void:
