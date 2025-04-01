@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://qdw4en85l0eq"]
+
+[ext_resource type="PackedScene" uid="uid://brb3771fda52c" path="res://3D/grids_tiles/wall.tscn" id="1_2npxr"]
+[ext_resource type="PackedScene" uid="uid://c20by0tgxdjpc" path="res://3D/grids_tiles/way.tscn" id="2_t4liu"]
+
+[node name="MeshLibraryScene" type="Node3D"]
+
+[node name="Wall" parent="." instance=ExtResource("1_2npxr")]
+
+[node name="Way" parent="." instance=ExtResource("2_t4liu")]

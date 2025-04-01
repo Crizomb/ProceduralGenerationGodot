@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c20by0tgxdjpc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t6cuw"]
+albedo_color = Color(0.188162, 0.571815, 1.84822e-05, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_t6cuw"]
+material = SubResource("StandardMaterial3D_t6cuw")
+size = Vector3(2, 2, 2)
+
+[node name="Wall" type="MeshInstance3D"]
+mesh = SubResource("BoxMesh_t6cuw")
