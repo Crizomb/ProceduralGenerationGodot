@@ -1,0 +1,37 @@
+[gd_scene load_steps=13 format=3 uid="uid://caedmedq7u11p"]
+
+[ext_resource type="MeshLibrary" uid="uid://fohjum535j4l" path="res://wavefunctioncollapse/mesh_lib_final.tres" id="1_f1ss6"]
+[ext_resource type="Script" uid="uid://bcnf7c7lqktcj" path="res://wavefunctioncollapse/grid_map_wave_func.gd" id="2_f1ss6"]
+[ext_resource type="Script" uid="uid://bvwg2elt0ekws" path="res://wavefunctioncollapse/adjacency_res.gd" id="3_gu57g"]
+[ext_resource type="Resource" uid="uid://uqnjdbw3jxxx" path="res://wavefunctioncollapse/adjacency_ressources/adj_dirt.tres" id="4_ec8du"]
+[ext_resource type="Resource" uid="uid://dii16w7oecwpj" path="res://wavefunctioncollapse/adjacency_ressources/adj_wall.tres" id="4_xln4c"]
+[ext_resource type="Resource" uid="uid://b8yxp54u3wkp0" path="res://wavefunctioncollapse/adjacency_ressources/adj_floor.tres" id="5_ec8du"]
+[ext_resource type="Resource" uid="uid://b0i5nqmc15pxc" path="res://wavefunctioncollapse/adjacency_ressources/adj_floor_detail.tres" id="6_x38d4"]
+[ext_resource type="Resource" uid="uid://cbi6eqbvan0yv" path="res://wavefunctioncollapse/adjacency_ressources/adj_stairs.tres" id="7_xln4c"]
+[ext_resource type="Resource" uid="uid://bf2fu81u4gvnl" path="res://wavefunctioncollapse/adjacency_ressources/adj_wall_x.tres" id="9_rk0n3"]
+[ext_resource type="Resource" uid="uid://cbc611cbgyw17" path="res://wavefunctioncollapse/adjacency_ressources/adj_wall_z.tres" id="10_8rrjd"]
+[ext_resource type="Resource" uid="uid://drqistoi8owxf" path="res://wavefunctioncollapse/adjacency_ressources/adj_opening_x.tres" id="11_vgphn"]
+[ext_resource type="Resource" uid="uid://db44ucmf1v5bb" path="res://wavefunctioncollapse/adjacency_ressources/adj_opening_z.tres" id="12_bpofg"]
+
+[node name="WaveFunctionCollapse" type="Node3D"]
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_f1ss6")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65535, 65535, 1441796, 65534, 65534, 2, 65534, 0, 2, 65534, 65535, 1, 65535, 65534, 2, 0, 65534, 1, 0, 0, 2, 0, 65535, 2, 65535, 0, 2, 65533, 65535, 2, 1, 65535, 1, 65533, 0, 2, 65534, 1, 2, 65535, 1, 2, 65533, 1, 2, 65532, 0, 0, 0, 1, 2, 1, 0, 2, 1, 1, 2, 2, 0, 2, 65534, 2, 2, 65535, 2, 2, 0, 2, 2, 65533, 2, 1, 65532, 1, 2, 65532, 2, 2, 1, 2, 1, 2, 1, 2, 2, 2, 2, 3, 1, 2, 65533, 3, 2, 65534, 3, 2, 65535, 3, 0, 0, 3, 2, 1, 3, 2, 65534, 4, 1, 65535, 4, 1, 0, 4, 0, 65535, 5, 2, 65532, 3, 0, 65533, 4, 2, 65534, 5, 2, 65531, 2, 1, 2, 3, 2, 3, 2, 2, 1, 4, 1, 0, 5, 2, 1, 5, 2, 2, 4, 2, 3, 3, 2, 4, 2, 0, 65533, 5, 1, 65532, 4, 1, 65531, 3, 0, 65534, 6, 2, 65535, 6, 1, 0, 6, 2, 65532, 5, 2, 65533, 6, 2, 3, 4, 2, 2, 5, 2, 1, 6, 1, 4, 3, 1, 2, 6, 2, 3, 5, 2, 4, 4, 1, 65532, 6, 2, 65531, 5, 2, 65533, 7, 2, 65534, 7, 2, 65535, 7, 2, 0, 7, 5, 65535, 8, 2, 0, 8, 2, 1, 8, 2, 65534, 8, 1, 2, 7, 0, 3, 6, 2, 4, 5, 2, 5, 4, 2, 65531, 6, 2, 65532, 7, 2, 65533, 8, 2, 4, 6, 5, 5, 5, 2, 5, 6, 5, 4, 7, 2, 5, 7, 1, 3, 7, 2, 6, 5, 2, 6, 7, 2, 3, 8, 1, 4, 8, 2, 5, 8, 1, 2, 8, 2, 65531, 7, 2, 65532, 8, 2, 65530, 6, 2, 65534, 9, 2, 65535, 9, 2, 0, 9, 2, 1, 9, 2, 2, 9, 2, 65533, 9, 5, 65532, 9, 5, 65533, 10, 2, 65532, 10, 1, 65531, 8, 2, 65534, 10, 2, 65531, 10, 2, 65530, 7, 2, 3, 9, 2, 4, 9, 2, 65535, 10, 5, 65534, 11, 2, 65535, 11, 2, 0, 11, 2, 1, 10, 2)
+}
+script = ExtResource("2_f1ss6")
+adjacency = Dictionary[int, ExtResource("3_gu57g")]({
+0: ExtResource("4_ec8du"),
+1: ExtResource("5_ec8du"),
+2: ExtResource("6_x38d4"),
+3: ExtResource("7_xln4c"),
+4: ExtResource("4_xln4c"),
+5: ExtResource("9_rk0n3"),
+6: ExtResource("10_8rrjd"),
+7: ExtResource("11_vgphn"),
+8: ExtResource("12_bpofg")
+})
+metadata/_editor_floor_ = Vector3(0, 0, 0)

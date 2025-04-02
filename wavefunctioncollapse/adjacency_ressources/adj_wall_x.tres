@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="AdjacencyRessource" load_steps=2 format=3 uid="uid://bf2fu81u4gvnl"]
+
+[ext_resource type="Script" uid="uid://bvwg2elt0ekws" path="res://wavefunctioncollapse/adjacency_res.gd" id="1_3m20y"]
+
+[resource]
+script = ExtResource("1_3m20y")
+Top = Dictionary[int, float]({})
+TopForward = Dictionary[int, float]({})
+TopBackward = Dictionary[int, float]({})
+TopRight = Dictionary[int, float]({})
+TopLeft = Dictionary[int, float]({})
+TopRightForward = Dictionary[int, float]({})
+TopLeftForward = Dictionary[int, float]({})
+TopRightBackward = Dictionary[int, float]({})
+TopLeftBackward = Dictionary[int, float]({})
+Forward = Dictionary[int, float]({
+1: 0.3,
+2: 0.7
+})
+Backward = Dictionary[int, float]({
+1: 0.3,
+2: 0.7
+})
+Right = Dictionary[int, float]({
+4: 0.2,
+5: 0.6,
+7: 0.2
+})
+Left = Dictionary[int, float]({
+4: 0.2,
+5: 0.6,
+7: 0.2
+})
+RightForward = Dictionary[int, float]({
+1: 0.3,
+2: 0.7
+})
+LeftForward = Dictionary[int, float]({
+1: 0.3,
+2: 0.7
+})
+RightBackward = Dictionary[int, float]({
+1: 0.3,
+2: 0.7
+})
+LeftBackward = Dictionary[int, float]({
+1: 0.3,
+2: 0.7
+})
+Down = Dictionary[int, float]({})
+DownForward = Dictionary[int, float]({})
+DownBackward = Dictionary[int, float]({})
+DownRight = Dictionary[int, float]({})
+DownLeft = Dictionary[int, float]({})
+DownRightForward = Dictionary[int, float]({})
+DownLeftForward = Dictionary[int, float]({})
+DownRightBackward = Dictionary[int, float]({})
+DownLeftBackward = Dictionary[int, float]({})
+metadata/_custom_type_script = "uid://bvwg2elt0ekws"
